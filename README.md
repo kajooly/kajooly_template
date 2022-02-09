@@ -2,8 +2,8 @@
 
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+  * Run the mix task ` mix phx.setup `
+  * Run the mix task ` mix assets.deploy `
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
