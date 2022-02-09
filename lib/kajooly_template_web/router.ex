@@ -14,7 +14,7 @@ defmodule KajoolyTemplateWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", KajoolyTemplateWeb do
+  scope "/template", KajoolyTemplateWeb do
     pipe_through :browser
 
     get "/", PageController, :index
