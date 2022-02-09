@@ -69,7 +69,7 @@ defmodule KajoolyTemplate.MixProject do
       # This option is only needed when you don't want to use the OTP application name
       name: "kajooly_template",
       # These are the default files included in the package
-      files: ~w(lib config assets test priv .formatter.exs mix.exs README* readme* LICENSE*
+      files: ~w(lib config assets test priv .formatter.exs mix.exs mix.lock README* readme* LICENSE*
                 license* CHANGELOG* changelog* src),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/gogohhh/kajooly_template"}

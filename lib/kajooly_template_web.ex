@@ -31,6 +31,7 @@ defmodule KajoolyTemplateWeb do
     quote do
       use Phoenix.View,
         root: "lib/kajooly_template_web/templates",
+        pattern: "**/*",
         namespace: KajoolyTemplateWeb
 
       # Import convenience functions from controllers
