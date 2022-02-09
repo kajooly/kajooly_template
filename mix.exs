@@ -10,7 +10,8 @@ defmodule KajoolyTemplate.MixProject do
       compilers: [:gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      package: package(),
     ]
   end
 
@@ -60,6 +61,18 @@ defmodule KajoolyTemplate.MixProject do
     [
       setup: ["deps.get", "cmd cd assets && npm install"],
       "assets.deploy": ["sass default --no-source-map --style=compressed", "esbuild default --minify", "phx.digest"]
+    ]
+  end
+
+  defp package() do
+    [
+      # This option is only needed when you don't want to use the OTP application name
+      name: "kajooly_template",
+      # These are the default files included in the package
+      files: ~w(lib config assets test priv .formatter.exs mix.exs README* readme* LICENSE*
+                license* CHANGELOG* changelog* src),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/gogohhh/kajooly_template"}
     ]
   end
 end
