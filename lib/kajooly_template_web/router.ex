@@ -18,11 +18,21 @@ defmodule KajoolyTemplateWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/trades", TradeController, except: [:new, :edit]
+
+    #live "/trade", CrudLive.Index, :index
+    #live "/trade/new", CrudLive.Index, :new
+    #live "/trade/:id/edit", CrudLive.Index, :edit
+
+    #live "/trade/:id", CrudLive.Show, :show
+    #live "/trade/:id/show/edit", CrudLive.Show, :edit
+
+
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", KajoolyTemplateWeb do
-  #   pipe_through :api
-  # end
+  #Other scopes may use custom stacks.
+  scope "/api", KajoolyTemplateWeb do
+    pipe_through :api
+
+    resources "/trades", TradeController, except: [:new, :edit]
+  end
 end
