@@ -10,28 +10,12 @@
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
   <body>
-    <%= render "partials/sidebar.html", assigns %>
-    <header class="pl-5" style="margin-left: 280px">
-      <section class="container">
-        <div class="row mt-4">
-          <div class="col-8">
-            <a href="https://phoenixframework.org/">
-            <img class="img-fluid w-75" src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
-            </a>
-          </div>
-          <div class="col-4 text-end">
-            <ul class="list-group">
-              <li class="list-group-numbered"><a class="d-block text-decoration-none" href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-              <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-                <li class="list-group-numbered"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "d-block text-decoration-none" %></li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-        
-      </section>
-    </header>
-    
-    <%= @inner_content %>
+    <div class="container-fluid" style="margin-left: -11px;">
+      <%= render "partials/navbar.html", assigns %>
+      <%= render "partials/sidebar.html", assigns %>
+      <div class="ps-3 pe-3"  style="margin-left: 280px; height: 100%; margin-top: -15px">
+        <%= @inner_content %>
+      </div>
+    </div>
   </body>
 </html>
