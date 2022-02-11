@@ -7,6 +7,11 @@
 # General application configuration
 import Config
 
+config :kajooly_template,
+  ecto_repos: [KajoolyTemplate.Repo],
+  generators: [binary_id: true]
+
+
 # Configures the endpoint
 config :kajooly_template, KajoolyTemplateWeb.Endpoint,
   url: [host: "localhost"],

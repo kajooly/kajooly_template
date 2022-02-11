@@ -36,6 +36,8 @@ defmodule KajoolyTemplate.MixProject do
     [
       {:phoenix, "~> 1.6.6"},
       {:phoenix_html, "~> 3.0"},
+      {:ecto_sql, "~> 3.6"},
+      {:postgrex, ">= 0.0.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.17.5"},
       {:floki, ">= 0.30.0", only: :test},
@@ -59,7 +61,7 @@ defmodule KajoolyTemplate.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "cmd cd assets && npm install"],
+      setup: ["deps.get", "ecto.create", "cmd cd assets && npm install"],
       "assets.deploy": ["sass default --no-source-map --style=compressed", "esbuild default --minify", "phx.digest"]
     ]
   end

@@ -18,6 +18,7 @@ defmodule KajoolyTemplateWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/trades", TradeController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
