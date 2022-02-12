@@ -63,6 +63,7 @@ defmodule KajoolyTemplate.MixProject do
   defp aliases do
     [
       setup: ["deps.get", "ecto.create", "cmd cd assets && npm install"],
+      assts: ["cmd cd assets && npm install"],
       "assets.deploy": ["sass default --no-source-map --style=compressed", "esbuild default --minify", "phx.digest"]
     ]
   end
