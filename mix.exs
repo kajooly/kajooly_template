@@ -63,7 +63,7 @@ defmodule KajoolyTemplate.MixProject do
   defp aliases do
     [
       setup: ["deps.get", "ecto.create", "cmd cd assets && npm install"],
-      assts: ["cmd cd assets && npm install"],
+      "assts.install": ["cmd cd assets && npm install"],
       "assets.deploy": ["sass default --no-source-map --style=compressed", "esbuild default --minify", "phx.digest"]
     ]
   end
@@ -76,7 +76,7 @@ defmodule KajoolyTemplate.MixProject do
       files: ~w(lib config assets test priv .formatter.exs mix.exs mix.lock README* readme* LICENSE*
                 license* CHANGELOG* changelog* src),
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/gogohhh/kajooly_template"}
+      links: %{"GitHub" => "https://github.com/kajooly/kajooly_template"}
     ]
   end
 end
