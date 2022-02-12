@@ -9,4 +9,15 @@ defmodule KajoolyTemplateWeb.Broad do
     {:ok, trade}
   end
 
+  # test
+  def test_broadcasts_trades do
+    data = %{
+      id: "3",
+      date: "2021-02-11T02:28:56.782Z",
+      site: "www.binance.com"
+    }
+
+    broadcast_trades(data, :message_created)
+  end
+
 end

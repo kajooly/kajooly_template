@@ -2,6 +2,8 @@ defmodule KajoolyTemplateWeb.PanelLive.Index do
 
   use KajoolyTemplateWeb, :live_view
 
+  alias KajoolyTemplateWeb.Broad
+
   @impl true
   def mount(_params, _session, socket) do
     Phoenix.PubSub.subscribe(KajoolyTemplate.PubSub, "trades")
@@ -19,9 +21,17 @@ defmodule KajoolyTemplateWeb.PanelLive.Index do
     |> assign(:page_title, "Panel")
   end
 
+  @impl true
   def handle_info({:message_created, message}, socket) do
     new_list = List.insert_at(socket.assigns.messages, 0, message)
     {:noreply, assign(socket, :messages, new_list)}
+  end
+
+  @impl true
+  def handle_event("activar", params, socket) do
+    IO.inspect(params, label: "params")
+    Broad.test_broadcasts_trades()
+    {:noreply, socket}
   end
 
 

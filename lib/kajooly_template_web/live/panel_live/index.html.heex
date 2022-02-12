@@ -1,7 +1,56 @@
-<div class="main">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 105%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Trading</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item ps-5">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- end nav -->
+<!-- sidebar -->
+<div class="d-block position-absolute flex-column flex-shrink-0 bg-light" style="width: 280px; height: 100%">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <span class="fs-4 ps-2">TRADING</span>
+    </a>
+    <hr>
+    <div class="nav-header">
+      <p class="ps-4">
+        REQUESTS
+      </p>
+    </div>
+    <hr>
+     <div class="ps-4">
+      <ul class="list-group">
+         <%= for message <- @messages do %>
+            <li role="button" class="nav-link p-0 border-0">
+              <span class="badge bg-success">GET </span>
+               <%= message.id %>
+               <br>
+              <span><%= message.site %></span>
+              <small><%= message.date %></small>
+            </li>
+         <% end %>
+      </ul>
+     </div>
+    <hr>
+</div>
+<!-- end sidebar -->
+
+<div class="main" style="margin-left: 280px;">
   <div class="container-fluid">
     <div class="row">
       <div class="col-6">
+      <!--
+        <button class="btn btn-primary" phx-click="activar">Activar</button>
+     -->
         <table class="table table-striped">
           <thead>
             <tr>

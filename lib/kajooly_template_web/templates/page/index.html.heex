@@ -1,54 +1,22 @@
 <div class="main">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-6">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th colspan="2">
-                Request details
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <span class="badge bg-success">GET </span>
-              </td>
-              <td class="overflow-hidden">
-                :host
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Date
-              </td>
-              <td class="overflow-hidden">
-                	02/10/2022 5:03:09 PM (3 hours ago)
-              </td>
-            </tr>
-            <tr>
-              <td>
-                ID
-              </td>
-              <td class="overflow-hidden">
-            	  b62688cc-7fee-41e6-bebf-e86e0e7f5c46
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col-6">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th colspan="2">
-                Header
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </div>
-  </div>
+  <header class="pl-5" style="margin-left: 280px">
+      <section class="container">
+        <div class="row mt-4">
+          <div class="col-8">
+            <a href="https://phoenixframework.org/">
+            <img class="img-fluid w-75" src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
+            </a>
+          </div>
+          <div class="col-4 text-end">
+            <ul class="list-group">
+              <li class="list-group-numbered"><a class="d-block text-decoration-none" href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+              <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
+                <li class="list-group-numbered"><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home), class: "d-block text-decoration-none" %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        
+      </section>
+    </header>
 </div>
