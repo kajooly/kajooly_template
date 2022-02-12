@@ -22,9 +22,8 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 kajooly_template-*.tar
 
-# Ignore assets that are produced by build tools.
-/priv/static/assets/
-/priv/static/
+# Ignore repo that are produced.
+/priv/repo/
 
 # Ignore digested assets cache.
 /priv/static/cache_manifest.json
