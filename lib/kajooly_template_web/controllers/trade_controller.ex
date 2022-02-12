@@ -1,8 +1,8 @@
 defmodule KajoolyTemplateWeb.TradeController do
   use KajoolyTemplateWeb, :controller
 
-  alias KajoolyTemplate.Trades
-  alias KajoolyTemplate.Trades.Trade
+  #alias KajoolyTemplate.Trades
+  #alias KajoolyTemplate.Trades.Trade
 
   alias KajoolyTemplate.Struct
 
@@ -51,18 +51,18 @@ defmodule KajoolyTemplateWeb.TradeController do
 
   def update(conn, %{"id" => id, "trade" => trade_params}) do
     #trade = Trades.get_trade!(id)
-    trade = ""
-    with {:ok, %Trade{} = trade} <- Trades.update_trade(trade, trade_params) do
-      render(conn, "show.json", trade: trade)
-    end
+
+    #with {:ok, %Trade{} = trade} <- Trades.update_trade(trade, trade_params) do
+    #  render(conn, "show.json", trade: trade)
+    #end
   end
 
   def delete(conn, %{"id" => id}) do
     #trade = Trades.get_trade!(id)
-    trade = ""
-    with {:ok, %Trade{}} <- Trades.delete_trade(trade) do
-      send_resp(conn, :no_content, "")
-    end
+
+    #with {:ok, %Trade{}} <- Trades.delete_trade(trade) do
+    #  send_resp(conn, :no_content, "")
+    #end
   end
 
 end
