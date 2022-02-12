@@ -11,7 +11,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 # Use 
 
-  {:kajooly_template, git: "https://github.com/gogohhh/kajooly_template", tag: "1.0"}
+  {:kajooly_template, git: "https://github.com/kajooly/kajooly_template"}
 
 ## Learn more
 
