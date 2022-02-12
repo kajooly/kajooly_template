@@ -15,7 +15,7 @@ defmodule KajoolyTemplateWeb.TradeView do
     #IO.inspect trade, label: "trade en la view ========"
     %{data:
       %{
-        signal: render_one(trade, TradeView, "trade.json")
+        trade: render_one(trade, TradeView, "trade.json")
       }
     }
   end

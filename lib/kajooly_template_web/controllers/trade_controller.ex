@@ -20,7 +20,7 @@ defmodule KajoolyTemplateWeb.TradeController do
   end
 
   def create(conn, params) do
-    IO.inspect conn, label: "datos de createconn =========================="
+    #IO.inspect conn, label: "datos de createconn =========================="
     IO.inspect params, label: "datos de create params =========================="
 
     data = params["trade"]
@@ -64,4 +64,5 @@ defmodule KajoolyTemplateWeb.TradeController do
       send_resp(conn, :no_content, "")
     end
   end
+
 end

@@ -18,6 +18,7 @@ defmodule KajoolyTemplateWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/panel", PanelLive.Index, :index
 
     #live "/trade", CrudLive.Index, :index
     #live "/trade/new", CrudLive.Index, :new

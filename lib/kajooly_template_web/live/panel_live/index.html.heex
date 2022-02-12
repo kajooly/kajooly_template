@@ -1,0 +1,56 @@
+<div class="main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th colspan="2">
+                Request details
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          <%= for message <- @messages do %>
+            <tr>
+              <td>
+                <span class="badge bg-success">GET </span>
+              </td>
+              <td class="overflow-hidden">
+                <%= message.site %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Date
+              </td>
+              <td class="overflow-hidden">
+                <%= message.date %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                ID
+              </td>
+              <td class="overflow-hidden">
+                <%= message.id %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th colspan="2">
+                Header
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
